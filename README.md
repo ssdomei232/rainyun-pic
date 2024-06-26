@@ -1,6 +1,7 @@
 # 雨云梗图集群
 雨云梗图集群-任何时间，任何地点，欣赏 美丽 的雨云梗图
-![github.webp](https://img.mmeiblog.cn/tc/2024/06/25/1/667ac43e7620b.webp)
+![](https://forum.rainyun.com/uploads/default/original/2X/4/4bae6cfa797192398e3c20b9ea1b2291bc8d2bf1.jpeg)
+![](https://forum.rainyun.com/uploads/default/original/2X/9/9095eedbea580ccb641d22dc9961b947d9961e2c.jpeg)
 ## 参数说明
 自己看配置文件的注释去
 
