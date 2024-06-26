@@ -21,7 +21,7 @@ foreach ($lines as $line) {
     
     // 检索
     if (array_intersect(explode(' ', $searchTerm), $keywords)) {
-        $results[] = [$imageUrl];
+        $results[] = $imageUrl;
     }
 }
 echo json_encode($results);
