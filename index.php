@@ -9,7 +9,7 @@ if (empty($pic_search)){
     $list_file = $listurl;
 }
 else {
-    $list_file = "/search.php?s=" . $pic_search;
+    $list_file = $siteURL . "/search.php?s=" . $pic_search;
 }
 
 // 统计梗图数量
