@@ -1,7 +1,8 @@
 <?php
-include('config.php');
+include ('config.php');
 header('Content-Type: application/json');
-function getFilesAndShuffle($dir) {
+function getFilesAndShuffle($dir)
+{
     $files = scandir($dir);
     $files = array_diff($files, ['.', '..']);
     shuffle($files);

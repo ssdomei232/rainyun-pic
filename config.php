@@ -26,4 +26,4 @@ $themeColor = 'light-blue';
 $accentColor = 'light-blue';
 
 // 本地list.php的路径
-$listurl ='list.php';
+$listurl = 'list.php';

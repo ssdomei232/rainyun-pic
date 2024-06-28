@@ -3,7 +3,8 @@
 error_reporting(E_ALL);
 
 // 清理参数
-function sanitizeInput($input) {
+function sanitizeInput($input)
+{
     $input = trim($input);
     $input = stripslashes($input);
     $input = htmlspecialchars($input);
