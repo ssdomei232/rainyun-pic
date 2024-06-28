@@ -26,6 +26,9 @@ $siteKeywords = '雨云梗图集群';
 // 通用版首页文件: ge-home.php
 $home_file = 'rainyun-home.php';
 
+// 管理员密码
+$admin_password = "rainyun";
+
 // 主题颜色和强调色颜色，更多颜色请参考https://www.mdui.org/docs/color
 $themeColor = 'light-blue';
 $accentColor = 'light-blue';
