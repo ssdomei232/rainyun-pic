@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 $searchTerm = $_GET['s'];
 $searchTerm = mb_strtolower($searchTerm, 'UTF-8');
-$metadataFile = 'search.txt'; // 数据文件路径
+$metadataFile = 'pages/search.txt'; // 数据文件路径
 $results = [];
 
 // 读取文件
