@@ -1,6 +1,5 @@
 <?php
 include ('config.php');
-include ('number.php');
 include ('pages/clean.php');
 
 // 获取参数
