@@ -1,7 +1,9 @@
 # 雨云梗图集群
 雨云梗图集群-任何时间，任何地点，欣赏 美丽 的雨云梗图
-![](https://forum.rainyun.com/uploads/default/original/2X/4/4bae6cfa797192398e3c20b9ea1b2291bc8d2bf1.jpeg)
-![](https://forum.rainyun.com/uploads/default/original/2X/9/9095eedbea580ccb641d22dc9961b947d9961e2c.jpeg)
+![index-preview](https://raw.githubusercontent.com/ssdomei232/rainyun-pic/main/assets/.github/index.webp)
+![search-preview](https://raw.githubusercontent.com/ssdomei232/rainyun-pic/main/assets/.github/search.webp)
+![login-preview](https://raw.githubusercontent.com/ssdomei232/rainyun-pic/main/assets/.github/login.webp)
+![admin-preview](https://raw.githubusercontent.com/ssdomei232/rainyun-pic/main/assets/.github/admin.webp)
 ## 参数说明
 自己看配置文件的注释去
 
