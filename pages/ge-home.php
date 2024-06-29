@@ -186,7 +186,7 @@ foreach ($files as $file) {
                         formData.append('images[]', file);
 
                         // 发送请求
-                        fetch('<?php echo $siteURL; ?>/?pages=upload', {
+                        fetch('/?pages=upload', {
                             method: 'POST',
                             body: formData
                         })

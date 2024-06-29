@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($pwd === $admin_password) {
         $_SESSION['loggedin'] = true; // 登录成功，设置会话变量
     } else {
-        exit("登录失败"); // 密码错误，终止脚本
+        exit("登录失败"); 
     }
 }
 
@@ -87,6 +87,7 @@ $images = readImages();
                         <div class="card-body">
                             <form method="post" class="form-inline">
                                 <input type="hidden" name="image_name" value="<?= $image ?>">
+                                <input type="hidden" name="pwd" value="<?php echo $admin_password; ?>">
                                 <label for="tags_<?= $image ?>" class="mr-2">Tags:</label>
                                 <input type="text" name="tags" id="tags_<?= $image ?>" class="form-control mr-2">
                                 <button type="submit" name="submit" class="btn btn-primary mr-1">提交</button>
