@@ -47,8 +47,11 @@ foreach ($files as $file) {
                 mdui-tooltip="{content: '搜索梗图'}"><i class="mdui-icon material-icons">search</i></a>
             <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white upload-trigger"
                 mdui-tooltip="{content: '上传图片'}"><i class="mdui-icon material-icons">cloud_upload</i></a>
+            <a href="<?php echo $siteURL; ?>/?pages=login"
+                class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white login-trigger"
+                mdui-tooltip="{content: '登录管理页面'}"><i class="mdui-icon material-icons">person</i></a>
         </div>
-        <!-- 搜索 -->
+        <!-- 展开的搜索框 -->
         <div class="mdui-textfield search-box mdui-hidden" id="search-box">
             <form onsubmit="submitSearch(event)">
                 <input class="mdui-textfield-input" type="text" placeholder="搜索梗图" id="search-keyword" />
@@ -76,6 +79,7 @@ foreach ($files as $file) {
     <script src="https://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
     <script>var messageOpts = { "progressBar": true, "showDuration": "1000", "hideDuration": "1000", "timeOut": "6000", "showEasing": "swing", "hideEasing": "linear", "showMethod": "fadeIn", "hideMethod": "fadeOut", "allowHtml": true, }; toastr.options = messageOpts;</script>
 
+    <!-- 填充card -->
     <script>
         function back_to_top() {
             $("html,body").animate({
@@ -121,6 +125,7 @@ foreach ($files as $file) {
             $("img.lazy").lazyload();
         });
     </script>
+    <!-- 搜索图片 -->
     <script>
         const searchTrigger = document.querySelector('.search-trigger');
         const searchBox = document.getElementById('search-box');
@@ -157,6 +162,7 @@ foreach ($files as $file) {
         searchTrigger.addEventListener('click', toggleSearchBoxVisibility);
         searchBox.addEventListener('submit', submitSearch);
     </script>
+    <!-- 上传文件 -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const uploadTrigger = document.querySelector('.upload-trigger');
@@ -164,34 +170,38 @@ foreach ($files as $file) {
             fileInput.type = 'file';
             fileInput.accept = 'image/*';
             fileInput.style.display = 'none';
+            fileInput.multiple = true;
 
             uploadTrigger.addEventListener('click', function () {
                 fileInput.click();
             });
 
             fileInput.addEventListener('change', function (event) {
-                const file = event.target.files[0];
-                if (file) {
-                    // 上传文件
-                    const formData = new FormData();
-                    formData.append('image', file);
+                const files = event.target.files; // 获取所有选中的文件
+                if (files.length > 0) {
+                    // 遍历选中的文件进行上传
+                    Array.from(files).forEach(file => {
+                        // 创建formData并添加文件
+                        const formData = new FormData();
+                        formData.append('images[]', file);
 
-                    // 发送请求
-                    fetch('<?php echo $siteURL; ?>/?pages=upload', {
-                        method: 'POST',
-                        body: formData
-                    })
-                        .then(response => response.json())
-                        .then(data => {
-                            if (data.success) {
-                                toastr.success('图片上传成功！');
-                            } else {
-                                toastr.error('图片上传失败：' + data.message, '错误');
-                            }
+                        // 发送请求
+                        fetch('<?php echo $siteURL; ?>/?pages=upload', {
+                            method: 'POST',
+                            body: formData
                         })
-                        .catch(error => {
-                            toastr.error('图片上传出错，请稍后再试！', '错误');
-                        });
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.success) {
+                                    toastr.success(`${file.name} 图片上传成功！`);
+                                } else {
+                                    toastr.error(`图片 ${file.name} 上传失败：${data.message}`, '错误');
+                                }
+                            })
+                            .catch(error => {
+                                toastr.error(`图片 ${file.name} 上传出错，请稍后再试！`, '错误');
+                            });
+                    });
                 }
             });
         });

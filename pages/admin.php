@@ -1,7 +1,19 @@
 <?php
-$pwd = isset($_GET['pwd']) ? sanitizeInput($_GET['pwd']) : '';
-if ($pwd != $admin_password){
-    exit;
+session_start(); // 开始会话，用于存储登录状态
+
+// 登录验证逻辑
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $pwd = isset($_POST['pwd']) ? sanitizeInput($_POST['pwd']) : '';
+    if ($pwd === $admin_password) {
+        $_SESSION['loggedin'] = true; // 登录成功，设置会话变量
+    } else {
+        exit("登录失败"); // 密码错误，终止脚本
+    }
+}
+
+// 确保用户已登录
+if (!isset($_SESSION['loggedin']) || !$_SESSION['loggedin']) {
+    exit("请先登录"); // 用户未登录，终止脚本
 }
 function readImages() {
     $images = [];
@@ -51,15 +63,17 @@ $images = readImages();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>管理图片</title>
+    <meta name="viewport" content="width=device-width">
+    <title><?php echo $siteName; ?> - 图片管理页面</title>
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="<?php echo $favicon; ?>">
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="mb-4">管理图片</h1>
+        <h1 class="mb-4">管理新增图片</h1>
         <a href="<?php echo $siteURL?>" class="btn btn-primary mb-3">首页</a>
         <hr>
 
