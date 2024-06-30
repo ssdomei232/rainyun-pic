@@ -9,7 +9,7 @@ $siteName = '雨云梗图集群';
 // 网站图标
 $favicon = '/favicon.ico';
 
-//站点URL,必须填写,前面加上http(s)
+// 站点URL,必须填写,前面加上http(s),后面不加'/'
 $siteURL = '';
 
 // 左上角图标内容
@@ -31,7 +31,7 @@ $admin_password = "rainyun";
 
 // 主题颜色和强调色颜色，更多颜色请参考https://www.mdui.org/docs/color
 $themeColor = 'light-blue';
-$accentColor = 'light-blue';
+$accentColor = 'light-green';
 
 // 本地list.php的路径
 $listurl = '?pages=list';

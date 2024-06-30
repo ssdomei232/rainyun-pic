@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
     $tags = $_POST['tags'];
     
     // 新的图片路径
-    $newImagePath = 'img/' . $imageName;
+    $newImagePath = $dir . $imageName;
     
     // 将图片从原始位置移动到新目录
     if (rename('assets/upload/' . $imageName, $newImagePath)) {

@@ -23,6 +23,7 @@ foreach ($files as $file) {
 <!DOCTYPE html>
 
 <html lang="zh-CN">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -44,11 +45,15 @@ foreach ($files as $file) {
             <div class="mdui-toolbar-spacer"></div>
             <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white search-trigger"
                 mdui-tooltip="{content: '搜索梗图'}"><i class="mdui-icon material-icons">search</i></a>
-            <a href="https://pic.mmeiblog.cn/rainyun/" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white upload-trigger"
+            <a href="https://pic.mmeiblog.cn/rainyun/"
+                class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white upload-trigger"
                 mdui-tooltip="{content: '上传图片'}"><i class="mdui-icon material-icons">cloud_upload</i></a>
+            <a href="https://github.com/ssdomei232/rainyun-pic/"
+                class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white code-trigger"
+                mdui-tooltip="{content: '查看源代码'}"><i class="mdui-icon material-icons">code</i></a>
         </div>
-        <!-- 搜索 -->
-        <div class="mdui-textfield search-box mdui-hidden" id="search-box">
+        <!-- 展开的搜索框 -->
+        <div class="mdui-textfield search-box mdui-hidden mdui-color-white" id="search-box">
             <form onsubmit="submitSearch(event)">
                 <input class="mdui-textfield-input" type="text" placeholder="搜索梗图" id="search-keyword" />
                 <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" type="submit"
