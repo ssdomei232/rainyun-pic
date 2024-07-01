@@ -15,7 +15,7 @@
 ## 已加入梗图集群的站点
 可以提交PR来收录    
 [source](https://api.zzwl.top/rainyun/)    
-[Main](https://pic.mmeiblog.cn/rainyun/)    
+[Main](https://pic.mmeiblog.cn)    
 
 ## 借鉴(抄袭)的网站
 [雨云梗图站](https://api.zzwl.top/rainyun/) - 前端就是从这里抄来的
