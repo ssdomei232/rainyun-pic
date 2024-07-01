@@ -23,15 +23,13 @@ foreach ($files as $file) {
 <!DOCTYPE html>
 
 <html lang="zh-CN">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title><?php echo $siteName; ?></title>
     <meta name="description" content="<?php echo $siteDescription; ?>">
     <meta name="keyword" content="<?php echo $siteKeywords; ?>">
-    <link rel="stylesheet" href="https://cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdmirror.com/npm/mdui@1.0.2/dist/css/mdui.min.css" />
     <link rel="stylesheet" href="assets/min.css" />
     <link rel="shortcut icon" href="<?php echo $favicon; ?>">
 </head>
@@ -45,15 +43,11 @@ foreach ($files as $file) {
             <div class="mdui-toolbar-spacer"></div>
             <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white search-trigger"
                 mdui-tooltip="{content: '搜索梗图'}"><i class="mdui-icon material-icons">search</i></a>
-            <a href="https://pic.mmeiblog.cn/rainyun/"
-                class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white upload-trigger"
+            <a href="https://pic.mmeiblog.cn/rainyun/" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white upload-trigger"
                 mdui-tooltip="{content: '上传图片'}"><i class="mdui-icon material-icons">cloud_upload</i></a>
-            <a href="https://github.com/ssdomei232/rainyun-pic/"
-                class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white code-trigger"
-                mdui-tooltip="{content: '查看源代码'}"><i class="mdui-icon material-icons">code</i></a>
         </div>
-        <!-- 展开的搜索框 -->
-        <div class="mdui-textfield search-box mdui-hidden mdui-color-white" id="search-box">
+        <!-- 搜索 -->
+        <div class="mdui-textfield search-box mdui-hidden" id="search-box">
             <form onsubmit="submitSearch(event)">
                 <input class="mdui-textfield-input" type="text" placeholder="搜索梗图" id="search-keyword" />
                 <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" type="submit"
@@ -74,10 +68,9 @@ foreach ($files as $file) {
 
 
 
-    <script src="https://cdn.staticfile.org/mdui/1.0.2/js/mdui.min.js"></script>
-    <script src="https://cdn.staticfile.org/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
-    <script src="https://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://cdn.jsdmirror.com/npm/mdui@1.0.2/dist/js/mdui.min.js"></script>
+    <script src="https://cdn.jsdmirror.com/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdmirror.com/npm/jquery-lazyload@1.9.3/jquery.lazyload.min.js"></script>
     <script>var messageOpts = { "progressBar": true, "showDuration": "1000", "hideDuration": "1000", "timeOut": "6000", "showEasing": "swing", "hideEasing": "linear", "showMethod": "fadeIn", "hideMethod": "fadeOut", "allowHtml": true, }; toastr.options = messageOpts;</script>
 
     <script>

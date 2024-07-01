@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
     $tags = $_POST['tags'];
     
     // 新的图片路径
-    $newImagePath = $dir . $imageName;
+    $newImagePath = 'img/' . $imageName;
     
     // 将图片从原始位置移动到新目录
     if (rename('assets/upload/' . $imageName, $newImagePath)) {
@@ -68,7 +68,7 @@ $images = readImages();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title><?php echo $siteName; ?> - 图片管理页面</title>
-    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdmirror.com/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="shortcut icon" href="<?php echo $favicon; ?>">
 </head>
 <body>

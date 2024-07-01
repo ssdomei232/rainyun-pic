@@ -30,8 +30,8 @@ foreach ($files as $file) {
     <title><?php echo $siteName; ?></title>
     <meta name="description" content="<?php echo $siteDescription; ?>">
     <meta name="keyword" content="<?php echo $siteKeywords; ?>">
-    <link rel="stylesheet" href="https://cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdmirror.com/npm/mdui@1.0.2/dist/css/mdui.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdmirror.com/npm/toastr@2.1.4/build/toastr.min.css">
     <link rel="stylesheet" href="assets/min.css" />
     <link rel="shortcut icon" href="<?php echo $favicon; ?>">
 </head>
@@ -76,10 +76,10 @@ foreach ($files as $file) {
 
 
 
-    <script src="https://cdn.staticfile.org/mdui/1.0.2/js/mdui.min.js"></script>
-    <script src="https://cdn.staticfile.org/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
-    <script src="https://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://cdn.jsdmirror.com/npm/mdui@1.0.2/dist/js/mdui.min.js"></script>
+    <script src="https://cdn.jsdmirror.com/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdmirror.com/npm/jquery-lazyload@1.9.3/jquery.lazyload.min.js"></script>
+    <script src="https://cdn.jsdmirror.com/npm/toastr@2.1.4/build/toastr.min.js"></script>
     <script>var messageOpts = { "progressBar": true, "showDuration": "1000", "hideDuration": "1000", "timeOut": "6000", "showEasing": "swing", "hideEasing": "linear", "showMethod": "fadeIn", "hideMethod": "fadeOut", "allowHtml": true, }; toastr.options = messageOpts;</script>
 
     <!-- 填充card -->

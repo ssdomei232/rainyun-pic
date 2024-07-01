@@ -34,4 +34,4 @@ $themeColor = 'light-blue';
 $accentColor = 'light-green';
 
 // 本地list.php的路径
-$listurl = '?pages=list';
+$listurl = '/?pages=list';
